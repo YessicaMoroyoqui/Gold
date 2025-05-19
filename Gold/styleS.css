@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --dark-purple: #3c122c;
+    --medium-pirple: #762ba3;
+    --light-purple: #ae40f0;
+    --yellow: #ffc800;
+    --pink: #fc5185;
+    --light-pink: #ffeffe;
+    --green: #00b090;
+    --background-gray:#eee; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body{
+    font-family: 'Poppins', 'sans-serif';
+    background-color: var(--background-gray);
+}
+
+.container{
+    max-width: 1200px;
+    margin:  auto;
+}
+.header {
+    background-image:linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(imagenes/inicio.jpg) ;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #d5c568;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #f5f4f4;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ce9678;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.footer {
+    padding: 100px 0;
+    background-color: #000000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3 {
+    font-size: 18px;
+    color: #f9fafc;
+    margin-bottom: 15px;
+}
+
+.link a {
+    font-size: 16px;
+    color: #c5c5c5;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+
+@media (max-width:640px){
+    
+    .menu{
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    
+    .footer {
+        padding: 30px; 
+     }
+ 
+     .footer-content{
+         flex-direction: column;
+         text-align: center;
+     }
+
+  }
